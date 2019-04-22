@@ -2,9 +2,9 @@ var timer = document.getElementById('time');
 if (getCookie("sTime")) {
 timer.innerHTML = getCookie("sTime");
  	var arr = timer.innerHTML.split(":");
-    var h = arr[0];
-    var m = arr[1];
-    var s = arr[2];
+    var h = +arr[0];
+    var m = +arr[1];
+    var s = +arr[2];
     var t = s;
 }
 else{
@@ -28,11 +28,11 @@ function deleteC(){
 function plus(){
 	t++;
 	s = t;
-	if (s > 59) {
+	if (s >= 59) {
 		m++;
 		t = 0;
 	}
-	if (m > 59) {
+	if (m >= 59) {
 		h++;
 		m = 0;
 	}
