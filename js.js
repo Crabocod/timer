@@ -28,11 +28,11 @@ function deleteC(){
 function plus(){
 	t++;
 	s = t;
-	if (s >= 59) {
+	if (s > 59) {
 		m++;
 		t = 0;
 	}
-	if (m >= 59) {
+	if (m > 59) {
 		h++;
 		m = 0;
 	}
